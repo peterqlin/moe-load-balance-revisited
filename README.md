@@ -2,10 +2,11 @@
 
 ## Why does this exist?
 - In the [original project](https://github.com/peterqlin/moe-load-balance), we falsely assumed that expert load balance was primarily caused by "real" (i.e. non-padding) tokens
-- This assumption turned out to be false upon further scrutiny, which is motivates this new, simpler approach to the problem of expert load imbalance
+- This assumption turned out to be false upon further scrutiny, which is motivates a new, simpler approach to the problem of expert load imbalance
+  - Experiment with pre-sorting batches by length
 
 ## What the code does
-- Visualize load imbalance caused by pad tokens during MoE model batch inference
+- Visualize (with heatmap) load imbalance caused by pad tokens during MoE model batch inference
 - Implement an optimized forward function that redistributes pad tokens across experts to mitigate expert oversaturation
 - Plot coefficient of variance, execution time, and MMLU accuracy metrics
 
