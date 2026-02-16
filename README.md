@@ -1,5 +1,5 @@
 # Revisiting MoE Load Balancing
-
+[See presentation](https://docs.google.com/presentation/d/1VzsWgv3v_GQbCMZxmbv_FylsRurCjEWM1-WbVysDjbU/edit?usp=sharing)
 ## Why does this exist?
 - In the [original project](https://github.com/peterqlin/moe-load-balance), we falsely assumed that expert load balance was primarily caused by "real" (i.e. non-padding) tokens
 - This assumption turned out to be false upon further scrutiny, which is motivates a new, simpler approach to the problem of expert load imbalance
