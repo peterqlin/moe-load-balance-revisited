@@ -1,2 +1,13 @@
-# moe-load-balance-revisited
-Batch inference load balancing for mixture-of-experts LLMs via padding token redistribution. A full re-evaluation and re-implementation of my group research project for CS 498 ML Systems.
+# Revisiting MoE Load Balancing
+
+## Why does this exist?
+- In the [original project](https://github.com/peterqlin/moe-load-balance), we falsely assumed that expert load balance was primarily caused by "real" (i.e. non-padding) tokens
+- This assumption turned out to be false upon further scrutiny, which is motivates this new, simpler approach to the problem of expert load imbalance
+
+## What the code does
+- Visualize load imbalance caused by pad tokens during MoE model batch inference
+- Implement an optimized forward function that redistributes pad tokens across experts to mitigate expert oversaturation
+- Plot coefficient of variance, execution time, and MMLU accuracy metrics
+
+## How to run your own evaluations
+- Update the list of `BatchRun`s passed into the `Evaluation` class with your own parameters
