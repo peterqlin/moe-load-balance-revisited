@@ -9,7 +9,7 @@
 - Visualize (with heatmap) load imbalance caused by pad tokens during MoE model batch inference
 - Implement an optimized forward function that redistributes pad tokens across experts to mitigate expert oversaturation
   - Based on `Qwen3MoeSparseMoeBlock::foward` found [here](https://github.com/huggingface/transformers/blob/main/src/transformers/models/qwen3_moe/modeling_qwen3_moe.py)
-- Plot coefficient of variance, execution time, and MMLU accuracy metrics
+- Plot coefficient of variation, execution time, and MMLU accuracy metrics
 
 ## How to run your own evaluations
 - Update the list of `BatchRun`s passed into the `Evaluation` class with your own parameters
